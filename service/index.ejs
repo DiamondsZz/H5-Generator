@@ -1,10 +1,5 @@
-<style>
-  p {
-    background-color: aqua;
-  }
-</style>
-
-<%= title %>
-
-<p>hello world</p>
-<diamonds>99</diamonds>
+<% for(const element of data){ %> <% if(element.type==='text') {%>
+<span><%=element.value %></span>
+<% }else{%>
+<img src="<%=element.value %>" style="width:<%=element.style.width %>px" />
+<%}%> <%}%>

@@ -1,0 +1,5 @@
+<% for(const element of data){ %> <% if(element.type==='text') {%>
+<span diamonds-id="<%=element.id %>"><%=element.value %></span>
+<% }else{%>
+<img diamonds-id="<%=element.id %>" src="<%=element.value %>" />
+<%}%> <%}%>

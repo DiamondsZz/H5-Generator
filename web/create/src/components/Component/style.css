@@ -1,8 +1,9 @@
 .component {
     width: 320px;
     background-color: rgba(256, 256, 256, .1);
-    max-height: 60vh;
+  
     border: none;
+    border-radius: 10px;
 }
 
 .component .ant-collapse-item {

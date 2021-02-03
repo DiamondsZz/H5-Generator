@@ -19,10 +19,15 @@ class Component extends React.Component {
           <Button type="primary">输入框</Button>
           <Button type="primary">开关</Button>
           <Button type="primary">评分</Button>
+          <Button type="primary">文本</Button>
+          <Button type="primary">图片</Button>
         </Panel>
 
         <Panel header="高级组件" key="3">
-          敬请期待！
+          <Button type="primary">表格</Button>
+          <Button type="primary">柱形图</Button>
+          <Button type="primary">折线图</Button>
+          <Button type="primary">饼状图</Button>
         </Panel>
       </Collapse>
     );

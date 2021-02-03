@@ -1,7 +1,6 @@
 .component {
     width: 320px;
     background-color: rgba(256, 256, 256, .1);
-  
     border: none;
     border-radius: 10px;
 }
@@ -21,9 +20,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.component .ant-collapse-item:nth-child(1) .ant-collapse-content-box {
     padding-bottom: 0;
 }
 

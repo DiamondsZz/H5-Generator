@@ -1,5 +1,10 @@
 import React from "react";
-import { Image,Rate  } from "antd";
+import { Collapse, Button } from "antd";
+import style from "./style";
+import "./style.css";
+
+const { Panel } = Collapse;
+
 class Component extends React.Component {
   constructor(props) {
     super(props);
@@ -7,13 +12,18 @@ class Component extends React.Component {
 
   render() {
     return (
-      <div>
-        <Rate/>
-        <Image
-          width={200}
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-        />
-      </div>
+      <Collapse className="component" style={style} defaultActiveKey="1">
+        <Panel header="基础组件" key="1">
+          <Button type="primary">按钮</Button>
+          <Button type="primary">输入框</Button>
+          <Button type="primary">开关</Button>
+          <Button type="primary">评分</Button>
+        </Panel>
+
+        <Panel header="高级组件" key="3">
+          敬请期待！
+        </Panel>
+      </Collapse>
     );
   }
 }

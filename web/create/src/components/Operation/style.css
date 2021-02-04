@@ -1,6 +1,14 @@
-.operation{
+.operation {
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
     background-color: rgba(256, 256, 256, .1);
     margin-left: 20px;
     border-radius: 10px;
+}
+
+.operation .operation-area {
+    width: 375px;
+    background-color: #fff;
+    margin: 20px;
 }

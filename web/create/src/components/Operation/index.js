@@ -1,16 +1,17 @@
 import React from "react";
 
-
-import "./style.css"
+import "./style.css";
 class Operation extends React.Component {
   constructor(props) {
     super(props);
   }
-  mouseUp(e){
-    console.log(e);
-  }
+
   render() {
-    return <div class="operation" onMouseUp={this.mouseUp}></div>;
+    return (
+      <div className="operation">
+        <div className="operation-area"></div>
+      </div>
+    );
   }
 }
 

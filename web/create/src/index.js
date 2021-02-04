@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import 'antd/dist/antd.css'
+import 'react-contexify/dist/ReactContexify.css';
 import App from "./components/App/";
 
 ReactDOM.render(

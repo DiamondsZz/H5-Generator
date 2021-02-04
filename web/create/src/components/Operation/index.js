@@ -14,7 +14,8 @@ class Operation extends React.Component {
     };
   }
   //显示属性弹窗
-  showDrawer() {
+  showDrawer(e) {
+    e.preventDefault()
     this.setState({ visible: true });
   } //隐藏属性弹窗
   hideDrawer(e) {
@@ -22,7 +23,6 @@ class Operation extends React.Component {
   }
   //颜色改变
   colorChange(color) {
-    console.log(color);
     this.setState({
       style: {
         backgroundColor: color.hex,
@@ -35,11 +35,11 @@ class Operation extends React.Component {
         <div
           className="operation-area"
           style={this.state.style}
-          onClick={() => this.showDrawer()}
+          onContextMenu={(e) => this.showDrawer(e)}
         ></div>
         <Drawer
           title="组件属性"
-          width={400}
+          width={360}
           placement="right"
           visible={this.state.visible}
           mask={false}

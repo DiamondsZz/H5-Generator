@@ -1,10 +1,13 @@
 import React from "react";
 import { Collapse, Button, message } from "antd";
+import {observer,inject} from 'mobx-react';
 import style from "./style";
 import "./style.css";
 
 const { Panel } = Collapse;
 
+@inject('componentStore')
+@observer
 class Component extends React.Component {
   constructor(props) {
     super(props);

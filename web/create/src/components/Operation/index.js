@@ -1,5 +1,6 @@
 import React from "react";
-import { Drawer, Divider, Tag } from "antd";
+import { Rnd } from "react-rnd";
+import { Drawer, Divider, Tag, Image } from "antd";
 import { CompactPicker } from "react-color";
 import "./style.css";
 
@@ -15,7 +16,7 @@ class Operation extends React.Component {
   }
   //显示属性弹窗
   showDrawer(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.setState({ visible: true });
   } //隐藏属性弹窗
   hideDrawer(e) {
@@ -29,14 +30,33 @@ class Operation extends React.Component {
       },
     });
   }
+  addComponent(){
+    
+  }
   render() {
     return (
       <div className="operation">
         <div
+          id="operation_area"
           className="operation-area"
           style={this.state.style}
           onContextMenu={(e) => this.showDrawer(e)}
-        ></div>
+          onClick={() => this.addComponent()}
+        >
+          <Rnd
+            bounds="#operation_area"
+            default={{
+              x: 0,
+              y: 0,
+              width: 120,
+            }}
+          >
+            <Image
+              preview={false}
+              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+            />
+          </Rnd>
+        </div>
         <Drawer
           title="组件属性"
           width={360}

@@ -12,3 +12,11 @@
     background-color: #fff;
     margin: 20px;
 }
+
+.operation .operation-area .ant-image {
+    height: 100%;
+}
+
+.operation .operation-area .ant-image .ant-image-img {
+    height: 100%;
+}
